@@ -4,6 +4,11 @@ body{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-size: cover; 
     background-attachment: fixed;
+    display: flex;
+  
+    
+    margin: 0;
+   
     
 }
 .header{
@@ -13,11 +18,9 @@ body{
     background-color: orange;
     position: fixed;
     font-size: 20px;
-    
-    align-items: flex-start;
-    transform: translate(-20px);
+    top: 0;
 
-    
+  
 }
 .nav-links{
     text-decoration: none;
@@ -51,8 +54,27 @@ opacity: 1;
   
     display: flex;
     align-items: center;
-    background-color: rgb(226, 224, 220);
+   
     border-radius: 20px;
+    justify-content: center;
+    
+    position: absolute;
+    transform: translate(-40%,-50%);
+    top: 10%;
+  left: 40%;
+
+ 
+  margin-bottom: 100px; /* Add margin at the bottom */ /* Adjust the value to leave space for the footer */
+  
+}
+.decsription{
+    position: absolute;
+    float: left;
+    left: 0;
+    top: 30%;
+    transform: translate(-50%,-40%);
+    
+    
 }
 .image-icon{
     
@@ -63,19 +85,21 @@ opacity: 1;
 
     background-image: url(./assets/png/user.png) ;
 }
+
 .container form{
     position: absolute;
    
     padding: 20px;
+    margin-top: 20px;
     left: 40%;
-    top: 20%;
+    top: 30%;
 
 }
 .container input{
     border-radius: 10px;
     border: 1px;
     height: 40px;
-    border-color: ;
+    border-color:white solid ;
    
     width: 250px;
     margin-top: 10px;
@@ -141,4 +165,18 @@ top: 10px;
     position:absolute;
     left:50%;
     margin-top: 10PX;
+}
+.footer{
+    width: 100%;
+    background-color: black;
+   
+    position: absolute;
+    min-height: auto;
+    bottom: 0;
+    left: 0;
+    margin-top: 30px;
+    overflow:hidden;
+    clear: both;
+    
+  
 }

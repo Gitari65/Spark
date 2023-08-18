@@ -20,9 +20,9 @@ app.get('/signup',(req,res)=>{
     })
 
 app.post("/signup",async (req,res)=>{
-    hashedPaswd=await bcrypt.hash(req.body.password,10)
+    hashedPaswd=await bcrypt.hash(req.body.signuppassword,10)
         const newUser= new collection({
-            email:req.body.email,
+            email:req.body.signupemail,
             password:hashedPaswd
         })
         await newUser.save().then(()=>{
@@ -36,22 +36,28 @@ app.post("/signup",async (req,res)=>{
 
     })
     app.post("/login",async (req,res)=>{
-        const email = req.body.email;
-        const password = req.body.password;
+        const email = req.body.signupemail;
+        const password = req.body.signupemail;
     try {
-          const user=collection.findOne({email})
+          const user=await collection.findOne({email:email})
         if(!user)
         {
             res.render("login",{errorMessage:"user not found"})
         }
-        const comparePassword=await bcrypt.compare(password,user.password)
-        if(comparePassword)
-        {
-            res.render("home")
-        }
-        else{
-           res.render("login",{errorMessage: "wrong password retry"}) 
-        }
+       else{
+           const comparePassword=await bcrypt.compare(password,user.password)
+       
+           if(comparePassword)
+            {
+               res.render("home")
+               console.log(" compare succes")
+            }
+          else{
+           res.status(500).render("login",{errorMessage: "wrong password retry"}) 
+           console.log("cant compare")
+            }
+       }
+     
 
     } catch (error) {
         console.error("Error: ",error)
@@ -59,6 +65,6 @@ app.post("/signup",async (req,res)=>{
       
 
     })
-app.listen(3000,(error)=>{
-
+app.listen(3000,()=>{
+    console.log("running....")
 })

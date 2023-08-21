@@ -18,6 +18,9 @@ res.render("login")
 app.get('/signup',(req,res)=>{
     res.render("signup")
     })
+    app.get('/home',(req,res)=>{
+        res.render("home")
+        })
 
 app.post("/signup",async (req,res)=>{
     hashedPaswd=await bcrypt.hash(req.body.signuppassword,10)

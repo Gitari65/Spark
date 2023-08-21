@@ -3,6 +3,43 @@
 *{
     margin: 0;
   
-    font-family:'Ysabeau Office','poppins','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    font-family:'poppins','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
     
+}
+.top-bar{
+    height: 50px;
+    width: 100%;
+    background-color: orange;
+    
+    
+}
+.top-bar .ul{
+ 
+    list-style: none;
+   
+    
+}
+.top-bar li{
+    
+    list-style: none;
+    display: inline-block;
+    line-height: 40px;
+ 
+    margin: 0 10px 0 0;
+  
+}
+.top-bar .website-title{
+    font-weight: 700;
+    
+    padding: 0 80px;
+ 
+}
+.top-bar a{
+    text-decoration: none;
+}
+.nav-links{
+    
+    float: right;
+  
+   
 }

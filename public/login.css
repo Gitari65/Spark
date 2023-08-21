@@ -1,13 +1,18 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,400&family=Poppins:wght@300;400;500&family=Rubik:ital@1&family=Ysabeau+Office&display=swap');
+
 body{
     background-image: url(./assets/png/Untitled\ design.png);
     background-position: center;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Ysabeau Office','poppins','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-size: cover; 
     background-attachment: fixed;
     display: flex;
   
     
     margin: 0;
+    
    
     
 }

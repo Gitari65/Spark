@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+ 
+        <nav class="nav-bar">
+            <img src="/images/dekut-logo.png" alt="">
+            <span id="website-name">Exam processing module</span>
+        </nav>
+  
+            
+
+    
+    
+    
+        <form action="/signup" class="signin signup" id="signupForm"method="POST">
+            <img class="image-icon" id="image" src="/images/add-user.png" alt="Image">
+         <br>
+        
+            <input type="email" name="signupEmail" id="" placeholder="Email"><br>
+            <input type="password" name="signupPassword" id="password" placeholder="password"><br>
+            <div class="dropdown">
+                <button class="dropdown-button">Select Role</button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Examiner</a></li>
+                    <li><a href="#">Admin</a></li>
+                    <li><a href="#">Exam Coordinator</a></li>
+                </ul>
+            </div>
+            
+            <a id="forgot-password" href="">Forgot password !</a>
+            <button type="submit">Sign up</button><br>
+
+            <label>Already have an account? </label><a href="/login">Login.</a>
+            </form>
+            <div class="Sign-in-description Sign-up-description " id="signupDesc">
+                <h2>Welcome! </h2>
+                <h4>To navigate please register in your credentials or else </h4>
+                <button id="signupInfoBtn" type="submit">Sign in</button>
+
+    <script src="/scripts/dropdownscript.js"></script>
+</body>
+</html>

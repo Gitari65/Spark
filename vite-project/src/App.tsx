@@ -1,12 +1,8 @@
 import PropTypes from 'prop-types'
-import { Navbar } from './Navbar'
+import { Navbar } from './assets/components/Navbar'
 //import route,routes
 import { Router, Route, Routes } from 'react-router-dom'
-import { Aboutus } from './Aboutus'
-import { Contactus } from './Contactus'
-import { Home } from './Home'
-
-
+import { Aboutus , Contactus, Home } from './assets/components/pages'
 function App()  {
   return (
     <div className='App'>
@@ -15,6 +11,7 @@ function App()  {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<Aboutus />} />
         <Route path='/contact' element={<Contactus />} />
+        <Route path='*' element={<h1>Not Found</h1>} /> 
       </Routes>
     </div>
   );
